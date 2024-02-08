@@ -1,0 +1,88 @@
+<h1>Denise D. Santos</h1>
+<div class="card">
+  <div class="container">
+
+    <p>Unformatted: {{presentDate | date}}</p>
+<p>Default Form: {{presentDate | date | uppercase}}</p>
+<p>Short Date: {{presentDate | date:'shortDate'}}</p>
+<p>Medium Date: {{presentDate | date:'mediumDate'}}</p>
+<p>Unformatted: {{presentDate | date}}</p>
+  </div>
+</div>
+<hr/>
+<div class="card">
+  <div class="container">
+
+    <p>dd/mm/yyyy: {{presentDate | date:'y MM d'}}</p>
+  </div>
+</div>
+<hr/>
+<div class="card">
+  <div class="container">
+
+    <p>Standard Time: {{presentDate | date:'shortTime'}}</p>
+    <p>Medium Time: {{presentDate | date:'mediumTime'}}</p>
+    <p>Long Time: {{presentDate | date:'longTime'}}</p>
+  </div>
+</div>
+
+<div class="card">
+  <div class="container">
+    <h4>Async pipe</h4>
+    <div>
+      Seconds changing in Time: {{ time$ | async | date:'mediumTime' }}
+    </div>
+  </div>
+</div>
+<hr/>
+<div class="card">
+  <div class="container">
+    <h4>Currency pipe</h4>
+    <p>{{ price | currency: '':true}}</p>
+    <p>{{ price | currency: 'INR '}}</p>
+
+  </div>
+</div>
+<hr/>
+<div class="card">
+  <div class="container">
+    <h4>Slice pipe</h4>
+    <div>
+      <h3>Start index:- {{Fruits | slice:2}}</h3>
+      <h4>Start and end index:- {{Fruits | slice:1:4}}</h4>
+      <h5>Negative index:- {{Fruits | slice:-2}}</h5>
+      <h6>Negatice start and end index:- {{Fruits | slice:-4:-2}}</h6>
+    </div>
+  </div>
+</div>
+
+<hr/>
+<div class="card">
+  <div class="container">
+    <h4>Decimal pipe</h4>
+    <div>
+      <p>Apply formatting:- {{decimalNum1 | number:'3.1'}}</p>
+      <p>Apply formatting:- {{decimalNum1 | number:'2.1-4'}}</p>
+    </div>
+  </div>
+</div>
+<hr/>
+<div class="card">
+  <div class="container">
+    <h4>JSON pipe</h4>
+    <p>Object: {{data | json}}</p>
+
+  </div>
+</div>
+<hr/>
+<div class="card">
+  <div class="container">
+    <h4>Percent Pipes</h4>
+    <p>A: {{ a | percent }}</p>
+
+<p>B: {{ b | percent: '4.3-5' }}</p>
+
+<p>B: {{ b | percent: '4.3-5' : 'fr' }}</p>
+  </div>
+</div>
+
